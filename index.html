@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img
+            src="images/jomit-low-resolution-logo-color-on-transparent-background.png"
+            class="logo"
+          />
+          <ul clas="items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfoltio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Full Stack Developer</p>
+          <h1>Hi, I'm <span>Jomit Thomas</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./images/IMG_2897.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              I am a recent graduate of the Northcoders Fullstack bootcamp.I am
+              thrilled to embark on a new journey in the tech industry. My
+              background in accounting and finance gives me a strong
+              understanding of numbers and attention to detail, which I have
+              been able to apply to my coding projects. My passion for
+              technology and my desire to learn and grow in a new environment
+              led me to pursue a career in tech.<br /><br />
+              Throughout my bootcamp, I have gained experience in a wide range
+              of technologies, including JavaScript, HTML, CSS, and various
+              frameworks such as React and Node.js. I am confident in my
+              abilities to create responsive and user-friendly web applications,
+              and I am passionate about creating visually appealing designs. I
+              understand that the tech industry is constantly evolving, and I am
+              eager to continue learning and expanding my skillset.
+              <br /><br />I am a quick learner and thrive in a fast-paced,
+              dynamic environment. I am confident that my passion for technology
+              and my ability to adapt quickly will make me a valuable addition
+              to any team.I am excited to bring my unique skillset to a new role
+              in the tech industry.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>JavaScript</span><br /></li>
+                <li><span>HTML</span><br /></li>
+                <li><span>CSS</span><br /></li>
+                <li><span>PostgreSql</span><br /></li>
+                <li><span>React</span><br /></li>
+                <li><span>Jest</span><br /></li>
+                <li><span>Git version control</span><br /></li>
+                <li><span>VS Code</span><br /></li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>Northcoders FullStack Bootcamp</span><br /></li>
+                <li><span>B.A Accounting and Finance</span><br /></li>
+                <li>
+                  <span>A-levels</span
+                  ><br />Biology<br />Chemistry<br />Psychology
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let tablinks = document.getElementsByClassName("tab-links");
+      let tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
