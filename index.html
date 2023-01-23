@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/0cad64f547.js" crossorigin="anonymous"></script>
+    
   </head>
   <body>
     <div id="header">
@@ -16,12 +17,14 @@
             src="images/jomit-low-resolution-logo-color-on-transparent-background.png"
             class="logo"
           />
-          <ul clas="items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfoltio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfoltio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <i class="fa-solid fa-x" onclick="closemenu()"></i> -->
           </ul>
+          <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
         </nav>
         <div class="header-text">
           <p>Full Stack Developer</p>
@@ -93,19 +96,21 @@
         </div>
       </div>
     </div>
-    <div id="'portfolio">
+    <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
           <div class="work">
             <img src="./images/IMG_2897.png" />
             <div class="layer">
-              <h3>Social media app</h3>
+              <h3>News app</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                adipisci et vel, iure recusandae a. 
+              A responsive news app where articles can be viewed,sorted,liked and commented on. The app is connected to my backend news api server. Data is stored in PSQL. The backend was created using PSQL,express and node.js. A model view controller pattern is used to handle server requests and test driven development using Jest and Supertest to test API functions. Below are the links for the front end and the back end.
               </p>
-              <a href="#"
+              <a href="https://github.com/jomit1612/nc-news"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i></i
+              ></a>
+              <a href="https://github.com/jomit1612/BC-NC-NEWS"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i></i
               ></a>
             </div>
@@ -115,12 +120,11 @@
           <div class="work">
             <img src="./images/IMG_2897.png" />
             <div class="layer">
-              <h3>Social media app</h3>
+              <h3>Calculator app</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                adipisci et vel, iure recusandae a.
+              Full functioning calulator app created using react
               </p>
-              <a href="#"
+              <a href="https://github.com/jomit1612/calculator-app"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i></i
               ></a>
             </div>
@@ -146,9 +150,19 @@
       <div class="container">
         <div class="row">
           <div class="contact-left">
-            <h1>My name</h1>
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fas fa-paper-plane"></i> jomitthomas1612@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 07585217496</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/jomit-thomas-b3517a1b9/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/jomit1612"><i class="fa-brands fa-github"></i></a>
+            </div><br>
+            <a href="./images/Jomit_Thomas_CV.pdf" download class="btn btn2" role="button" >Download CV</a>
+            
           </div>
-          <div class="contact-right"></div>
+          <div class="contact-right">
+
+          </div>
         </div>
       </div>
     </div>
@@ -166,6 +180,16 @@
         document.getElementById(tabname).classList.add("active-tab");
       }
 
+
+    </script>
+    <script>
+      let sidemenu=document.getElementById("sidemenu")
+      function openmenu(){
+        sidemenu.style.right="0"
+      }
+      function closemenu(){
+        sidemenu.style.right="-200px"
+      }
     </script>
   </body>
 </html>
