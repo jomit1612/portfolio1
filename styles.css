@@ -236,7 +236,7 @@ nav ul li a::after {
 }
 
 .btn.btn2 {
-  background-color: #d32364;
+  background-color: #ff004f;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -271,7 +271,7 @@ nav ul li a::after {
 nav .fa-solid {
   display: hidden;
 }
-/* @media screen {
+@media only screen and (min-width: 600px) {
   #header {
     background-image: hidden;
   }
@@ -304,7 +304,7 @@ nav .fa-solid {
   .sub-title {
     font-size: 40px;
   }
-  .about-col-1,
+  /* .about-col-1,
   .about-col-2 {
     flex-basis: 100%;
   }
@@ -313,7 +313,7 @@ nav .fa-solid {
   }
   .about-col-2 {
     font-size: 14px;
-  }
+  } */
   .tab-links {
     font-size: 16px;
     margin-right: 20px;
@@ -321,4 +321,4 @@ nav .fa-solid {
   .contact-left {
     flex-basis: 100%;
   }
-} */
+}
